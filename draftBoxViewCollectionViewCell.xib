@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="boxCell" id="HDw-wy-euD" customClass="draftBoxViewCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="189" height="223.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="189" height="223.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45O-1L-nqb">
+                        <rect key="frame" x="0.0" y="203" width="189" height="20"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="lxC-IW-fBM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0J6-zb-u38">
+                        <rect key="frame" x="0.0" y="-1" width="189" height="223.5"/>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-qz-2Bx">
+                        <rect key="frame" x="3" y="3" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="hsw-PO-yaU"/>
+                            <constraint firstAttribute="height" constant="20" id="kCw-dW-hcX"/>
+                            <constraint firstAttribute="width" constant="30" id="sRf-kc-Gbd"/>
+                            <constraint firstAttribute="width" constant="20" id="uRR-0u-N9d"/>
+                        </constraints>
+                        <state key="normal" image="selected.png"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kCw-dW-hcX"/>
+                                <exclude reference="uRR-0u-N9d"/>
+                            </mask>
+                        </variation>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0J6-zb-u38" secondAttribute="bottom" id="2fA-1W-qHp"/>
+                <constraint firstItem="PcZ-qz-2Bx" firstAttribute="top" secondItem="HDw-wy-euD" secondAttribute="top" id="DK8-Cq-owh"/>
+                <constraint firstItem="0J6-zb-u38" firstAttribute="top" secondItem="HDw-wy-euD" secondAttribute="top" id="Sdh-jC-whW"/>
+                <constraint firstItem="0J6-zb-u38" firstAttribute="leading" secondItem="HDw-wy-euD" secondAttribute="leading" id="XhC-Or-Q6a"/>
+                <constraint firstItem="PcZ-qz-2Bx" firstAttribute="leading" secondItem="HDw-wy-euD" secondAttribute="leading" id="foR-hK-y1U"/>
+                <constraint firstAttribute="trailing" secondItem="45O-1L-nqb" secondAttribute="trailing" id="ihL-s1-vBD"/>
+                <constraint firstAttribute="trailing" secondItem="0J6-zb-u38" secondAttribute="trailing" id="quV-u6-rEb"/>
+                <constraint firstItem="45O-1L-nqb" firstAttribute="leading" secondItem="HDw-wy-euD" secondAttribute="leading" id="rDO-kJ-78h"/>
+                <constraint firstAttribute="bottom" secondItem="45O-1L-nqb" secondAttribute="bottom" id="usi-qC-GIb"/>
+            </constraints>
+            <size key="customSize" width="189" height="223.5"/>
+            <connections>
+                <outlet property="image" destination="0J6-zb-u38" id="RMl-Xq-x55"/>
+                <outlet property="label" destination="45O-1L-nqb" id="zYK-te-PsC"/>
+                <outlet property="renove" destination="PcZ-qz-2Bx" id="gaU-0Z-syq"/>
+            </connections>
+            <point key="canvasLocation" x="96.5" y="37.75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="selected.png" width="24" height="24"/>
+    </resources>
+</document>
